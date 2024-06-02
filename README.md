@@ -31,6 +31,7 @@ This can be updated with your own list of words.
 
 ## File structure of the project
 The entire game is contained within the 'Hangman_Game.py' file.
+Milestone files are included to show project progress as required by course.
 
 ## License information
 This game is licenced under the MIT Licence as outlined below.
