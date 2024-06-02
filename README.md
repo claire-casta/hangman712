@@ -9,16 +9,24 @@ Run the game using a terminal compatible with Python (eg, bash) and run the comm
 
 ## Usage instructions
 The game will randomly select a word from the list of words and provide a set of blank spaces equivalent to the word.
+
 The user is prompted to guess one letter at a time to figure out the word.
+
 If the user guesses correctly, the game will tell them how many unique letters are left to guess and prompt them to guess again.
+
 If the user guesses incorrectly, the game will tell them this, show how many lives they have remaining and then prompt them to guess again.
+
 If an invalid guess is entered the game will tell the user and prompt them to guess again.
+
 If a previous guess is repeated, the game will tell the user, list their previous guesses and prompt them to guess again.
 
+
 The user must guess the word before they run out of lives to win the game.
+
 If the user runs out of lives they lose the game. 
 
 A short list of example words are inlcuded in 'Hangman_Game.py' as the variable 'word_list'.
+
 This can be updated with your own list of words.
 
 ## File structure of the project
