@@ -9,7 +9,7 @@ class Hangman:
         self.word_guessed = ['_'] * (len(self.word))                # Creates a list with blank spaces in place of each letter in the word.
         self.list_of_guesses = []                                   # Creates empty list to populate with previous guesses
 
-    def check_guess(self, guess):                                       #function to check whether guess is in word
+    def __check_guess__(self, guess):                                       #function to check whether guess is in word
         if guess.lower() in self.word:                                  #converts guess to lowercase
             print(f"Good guess! {guess} is in the word.")               #tells user guess is in word
             while True:
@@ -25,7 +25,7 @@ class Hangman:
             self.num_lives -= 1                                            # Reduces the number of lives left
             print(f"You have {self.num_lives} lives left")                                       # Tells user how many lives left
 
-    def ask_for_input(self):
+    def __ask_for_input__(self):
         while True:
             guess = input("guess a letter...\n")                               #prompts user to enter a letter guess
             if not(len(guess)) == 1 or not(guess.isalpha()):                   #checks guess is a single letter AND a-z character
