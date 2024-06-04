@@ -28,10 +28,10 @@ class Hangman:
 
         Methods
         -------
-
-        ???????? UNSURE WHETHER ANYTHING GOES HERE ???????   <<<<<<<<<<<<<<<<<<<----------- DONT LEAVE THIS HERE!!!!!!!!
-
-
+        __check_guess__(guess)
+            Checks whether the letter guessed is in the word, and prints a response.
+        __ask_for_input__()
+            Asks the user to guess a letter in the word, and then checks whether the letter guessed is a valid input.
         """
         
     def __init__(self, word_list, num_lives = 5):                               # Gives parameters of word_list and num_lives
@@ -43,7 +43,7 @@ class Hangman:
         num_lives : int, optional
             Number of lives remaining (defaults is 5)
         """
-    
+
         self.word_list = word_list                                              # Allows a list of words to be input
         self.num_lives = num_lives                                              # Remaining number of lives, starts at 5 automatically
         self.word = random.choice(word_list)                                    # Selects a random word from the word_list
@@ -62,7 +62,7 @@ class Hangman:
         guess : any
             user guess, must be a single a-z letter
         """
-
+        
         if guess.lower() in self.word:                                          #converts guess to lowercase
             print(f"Good guess! {guess} is in the word.")                       #tells user guess is in word
             while True:
@@ -133,6 +133,7 @@ def play_game(word_list):
         elif game.num_letters > 0:
             game.__ask_for_input__()
 
+#help(Hangman)                                                                  # Optional call for help via docstrings
 
 word_list = ['pineapple', 'strawberry', 'blackberry', 'blueberry', 'raspberry'] # Editable list of words for computer to choose from
 play_game(word_list)                                                            # Starts the game
