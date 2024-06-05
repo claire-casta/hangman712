@@ -90,7 +90,8 @@ class Hangman:
         ----------
         guess : any
             user guess, must be a single a-z letter
-        """
+        """ 
+
         while True:
             guess = input("guess a letter...\n")                                # Prompts user to enter a letter guess
             if not(len(guess)) == 1 or not(guess.isalpha()):                    # If guess is NOT a single letter AND a-z character
@@ -118,7 +119,7 @@ def play_game(word_list):
     Parameters
     ----------
     word_list : list[str]
-    """
+    """ 
 
     num_lives = 5
     game = Hangman(word_list, num_lives)
@@ -133,7 +134,8 @@ def play_game(word_list):
         elif game.num_letters > 0:
             game.__ask_for_input__()
 
-#help(Hangman)                                                                  # Optional call for help via docstrings
+help(Hangman)                                                                  # Optional call for help via docstrings
 
-word_list = ['pineapple', 'strawberry', 'blackberry', 'blueberry', 'raspberry'] # Editable list of words for computer to choose from
-play_game(word_list)                                                            # Starts the game
+if __name__ == "__main__":                                                      # Only executes code below if file is used directly
+    word_list = ['pineapple', 'strawberry', 'blackberry', 'blueberry', 'raspberry'] # Editable list of words for computer to choose from
+    play_game(word_list)                                                            # Starts the game
